@@ -1,12 +1,11 @@
 from flask import Flask
-from app.config import Config, Configdb
-from flask_sqlalchemy import SQLAlchemy
-from flask_migrate import Migrate
-from app import routes, models
+from app.config import Config
 
 
-app = Flask(__name__)
-app.config.from_object(Config)
-app.config.from_object(Configdb)
-db = SQLAlchemy(app)
-migrate = Migrate(app, db)
+application = Flask(__name__)
+application.config.from_object(Config)
+
+
+@application.route("/")
+def hello():
+    return "Hello World"
