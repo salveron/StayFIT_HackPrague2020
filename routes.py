@@ -49,14 +49,14 @@ def user_details():
 @application.route("/phone_verification", methods=["GET", "POST"])
 def phone_verification():
     if request.method == "POST":
-        country_code = request.form.get("country_code")
-        phone_number = request.form.get("phone_number")
-        method = request.form.get("method")
+        data = request.get_json()
+        country_code = data["country_code"]
+        phone_number = data["phone_number"]
 
         session['country_code'] = country_code
         session['phone_number'] = phone_number
 
-        api.phones.verification_start(phone_number, country_code, via=method)
+        api.phones.verification_start(phone_number, country_code, via="sms")
 
         return redirect(url_for("verify"))
 
