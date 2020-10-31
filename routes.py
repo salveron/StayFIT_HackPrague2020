@@ -14,7 +14,7 @@ def get_user_details(user_id):
             'message': 'user does not exist'
         }
         return jsonify(response), 404
-    result = user_schema.dumps(user).data
+    result = user_schema.dump(user)
     response = {
         'data': result,
         'status_code': 202

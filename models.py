@@ -10,6 +10,10 @@ class User(db.Model):
         return f"User: name - {self.name}, phone - {self.phone}"
 
 
-class UserSchema(ma.Schema):
+class UserSchema(ma.SQLAlchemySchema):
     class Meta:
         model = User
+
+    id = ma.auto_field()
+    name = ma.auto_field()
+    phone = ma.auto_field()
