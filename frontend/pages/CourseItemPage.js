@@ -92,9 +92,9 @@ class CourseItemPage extends React.Component {
                     </View>
                     <View style={{alignSelf: "center", flexDirection: 'column', marginBottom: 50}}>
                         <ContentItem header='Introduction' locked={false} number={1} onPressed={onPressLink} index={1}/>
-                        <ContentItem header='Money makes the world go around' locked={false} number={2} index={2} onPressed={onPressLink}/>
-                        <ContentItem header='Teaching mathematics' locked={true} number={3} index={3} onPressed={onPressLink}/>
-                        <ContentItem header='Money and children' locked={true} number={4} index={4} onPressed={onPressLink}/>
+                        <ContentItem header='Money make' locked={false} number={2} index={2} onPressed={onPressLink}/>
+                        <ContentItem header='Teaching math' locked={true} number={3} index={3} onPressed={onPressLink}/>
+                        <ContentItem header='Money and child' locked={true} number={4} index={4} onPressed={onPressLink}/>
                     </View>
                 </View>
             </ScrollView>

@@ -11,6 +11,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="31e475ad-df18-46ac-928b-ad24881d9090" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/pages/CourseItemPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/pages/CourseItemPage.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -38,6 +39,12 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
   </component>
   <component name="JupyterTrust" id="5e844ea7-e032-4daa-a356-8c6b3497aa57" />
   <component name="ProjectId" id="1jcOCbuPChylEUVuMj6EDsRfY8R" />
@@ -126,7 +133,7 @@
       <workItem from="1604141630869" duration="37783000" />
       <workItem from="1604199594928" duration="119000" />
       <workItem from="1604200241213" duration="4446000" />
-      <workItem from="1604220870987" duration="7984000" />
+      <workItem from="1604220870987" duration="8489000" />
     </task>
     <servers />
   </component>
