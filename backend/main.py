@@ -1,6 +1,7 @@
 import os
 
 from utils import conn, cursor, application
+from routes import *
 
 
 with open(os.path.join("db", "create.sql")) as f:

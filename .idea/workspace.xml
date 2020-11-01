@@ -11,12 +11,67 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="31e475ad-df18-46ac-928b-ad24881d9090" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/backend/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/db/app.db" beforeDir="false" afterPath="$PROJECT_DIR$/backend/db/app.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/models.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/routes/get_routes.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/routes/get_routes.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/routes/routes.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/routes/routes.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/backend/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/routes/get_routes.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/routes/routes.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/routes.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile_app/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile_app/capacitor.config.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile_app/ionic.config.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile_app/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile_app/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile_app/public/assets/icon/favicon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile_app/public/assets/icon/icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile_app/public/assets/shapes.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile_app/public/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile_app/public/manifest.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile_app/src/App.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile_app/src/index.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile_app/src/pages/LoginScreen.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile_app/src/pages/TempScreen.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile_app/src/pages/VerifyPhoneScreen.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile_app/src/react-app-env.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile_app/src/serviceWorker.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile_app/src/setupTests.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile_app/src/theme/variables.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile_app/tsconfig.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react_native_mobile/.expo-shared/assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.expo-shared/assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react_native_mobile/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react_native_mobile/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react_native_mobile/app.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/app.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react_native_mobile/assets/Background.png" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/assets/Background.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react_native_mobile/assets/EduVest.png" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/assets/EduVest.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react_native_mobile/assets/Flag_CR.png" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/assets/Flag_CR.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react_native_mobile/assets/Photo-2.png" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/assets/Photo-2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react_native_mobile/assets/Photo.png" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/assets/Photo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react_native_mobile/assets/adaptive-icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/assets/adaptive-icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react_native_mobile/assets/avatar.png" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/assets/avatar.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react_native_mobile/assets/closed_lock.png" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/assets/closed_lock.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react_native_mobile/assets/favicon.png" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/assets/favicon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react_native_mobile/assets/flag_cr.svg" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/assets/flag_cr.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react_native_mobile/assets/goal1.png" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/assets/goal1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react_native_mobile/assets/goal2.png" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/assets/goal2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react_native_mobile/assets/goal3.png" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/assets/goal3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react_native_mobile/assets/goal4.png" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/assets/goal4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react_native_mobile/assets/icon-clock.png" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/assets/icon-clock.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react_native_mobile/assets/icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/assets/icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react_native_mobile/assets/left_arrow1.png" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/assets/left_arrow1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react_native_mobile/assets/left_white_arrow.png" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/assets/left_white_arrow.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react_native_mobile/assets/open_lock.png" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/assets/open_lock.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react_native_mobile/assets/splash.png" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/assets/splash.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react_native_mobile/babel.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/babel.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react_native_mobile/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react_native_mobile/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react_native_mobile/pages/CourseItemPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/pages/CourseItemPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react_native_mobile/pages/CoursePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/pages/CoursePage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react_native_mobile/pages/GoalsOKPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/pages/GoalsOKPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react_native_mobile/pages/GoalsPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/pages/GoalsPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react_native_mobile/pages/LoginScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/pages/LoginScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react_native_mobile/pages/TopicPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/pages/TopicPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react_native_mobile/pages/VerifyScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/pages/VerifyScreen.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,9 +119,9 @@
       <recent name="$PROJECT_DIR$/app" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/backend" />
       <recent name="$PROJECT_DIR$/react_native_mobile" />
       <recent name="$PROJECT_DIR$/mobile_app" />
-      <recent name="$PROJECT_DIR$/backend" />
       <recent name="$PROJECT_DIR$/db" />
       <recent name="$PROJECT_DIR$" />
     </key>
@@ -131,7 +186,7 @@
       <workItem from="1604141630869" duration="37783000" />
       <workItem from="1604199594928" duration="119000" />
       <workItem from="1604200241213" duration="4446000" />
-      <workItem from="1604220870987" duration="2490000" />
+      <workItem from="1604220870987" duration="5520000" />
     </task>
     <servers />
   </component>
