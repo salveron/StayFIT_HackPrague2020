@@ -62,10 +62,10 @@ def course_list():
     for course in courses:
         dicts.append({
             "id": course[0],
-            "id_article": course[1],
+            "article_id": course[1],
             "header": course[2],
             "topic": course[3],
-            "length": course[4],
+            "duration": course[4],
             "description": course[5]
         })
 

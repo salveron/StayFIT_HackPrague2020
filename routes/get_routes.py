@@ -17,11 +17,7 @@ def get_user(user_id):
         'name': user[1],
         'phone': user[2]
     }
-    response = {
-        'data': result,
-        'status_code': 202
-    }
-    return jsonify(response)
+    return jsonify(result)
 
 
 @application.route("/videos/<video_id>", methods=['GET'])
@@ -32,18 +28,14 @@ def get_video(video_id):
         response = {
             'message': 'video does not exist'
         }
-        return jsonify(response), 404
+        return jsonify(response)
     result = {
         'id': video[0],
         'url': video[1],
         'title': video[2],
         'description': video[3]
     }
-    response = {
-        'data': result,
-        'status_code': 202
-    }
-    return jsonify(response)
+    return jsonify(result)
 
 
 @application.route("/articles/<article_id>", methods=['GET'])
@@ -54,34 +46,35 @@ def get_article(article_id):
         response = {
             'message': 'article does not exist'
         }
-        return jsonify(response), 404
+        return jsonify(response)
     result = {
         'id': article[0],
         'header': article[1],
         'content': article[2]
     }
-    response = {
-        'data': result,
-        'status_code': 202
-    }
-    return jsonify(response)
+    return jsonify(result)
 
 
 @application.route("/courses/<course_id>", methods=["GET"])
 def get_course(course_id):
-    cursor.execute(f"SELECT * FROM course WHERE id = {course_id}")
+    cursor.execute(f"SELECT * FROM course LEFT JOIN article ON course.article_id = article.id WHERE course.id = {course_id}")
     course = cursor.fetchone()
+    print(course)
     if course is None:
         response = {
             'message': 'course does not exist'
         }
         return jsonify(response), 404
     result = {
-        'id': course[0],
-        'id_article': course[1]
+        "id": course[0],
+        "article_id": course[1],
+        "header": course[2],
+        "topic": course[3],
+        "duration": course[4],
+        "description": course[5],
+        "article_header": course[7],
+        "article_content": course[8]
     }
-    response = {
-        'data': result,
-        'status_code': 202
-    }
-    return jsonify(response)
+
+    cursor.execute(f"")
+    return jsonify(result)

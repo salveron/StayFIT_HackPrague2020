@@ -6,14 +6,14 @@ DROP TABLE IF EXISTS course;
 CREATE TABLE user(id INTEGER PRIMARY KEY, name TEXT UNIQUE NOT NULL, phone TEXT UNIQUE NOT NULL);
 CREATE TABLE article(id INTEGER PRIMARY KEY, header TEXT UNIQUE NOT NULL, content TEXT, course_id INTEGER, FOREIGN KEY(course_id) REFERENCES course(id));
 CREATE TABLE video(id INTEGER PRIMARY KEY, url TEXT UNIQUE NOT NULL, title TEXT UNIQUE NOT NULL, description TEXT, course_id INTEGER, FOREIGN KEY(course_id) REFERENCES course(id));
-CREATE TABLE course(id INTEGER PRIMARY KEY, id_article INTEGER UNIQUE,
-        header TEXT NOT NULL, topic TEXT NOT NULL, length TEXT NOT NULL, description TEXT, FOREIGN KEY(id_article) REFERENCES article(id));
+CREATE TABLE course(id INTEGER PRIMARY KEY, article_id INTEGER UNIQUE,
+        header TEXT NOT NULL, topic TEXT NOT NULL, duration TEXT NOT NULL, description TEXT, FOREIGN KEY(article_id) REFERENCES article(id));
 
-INSERT INTO course(id, id_article, header, topic, length, description) VALUES (1, 1, "Header 1", "Topic 1", "1h 30m", "Lorem ipsum...");
-INSERT INTO course(id, id_article, header, topic, length, description) VALUES (2, 4, "Header 2", "Topic 2", "2h", "Lorem ipsum dolor sit amet...");
-INSERT INTO course(id, id_article, header, topic, length) VALUES (3, 3, "Header 3", "Topic 3", "10m");
-INSERT INTO course(id, id_article, header, topic, length) VALUES (4, 5, "Header 4", "Topic 4", "40m 30s");
-INSERT INTO course(id, header, topic, length) VALUES (5, "Header 5", "Topic 5", "1h");
+INSERT INTO course(id, article_id, header, topic, duration, description) VALUES (1, 1, "Header 1", "topic", "1h 30m", "Lorem ipsum...");
+INSERT INTO course(id, article_id, header, topic, duration, description) VALUES (2, 4, "Header 2", "topic", "2h", "Lorem ipsum dolor sit amet...");
+INSERT INTO course(id, article_id, header, topic, duration) VALUES (3, 3, "Header 3", "course", "10m");
+INSERT INTO course(id, article_id, header, topic, duration) VALUES (4, 5, "Header 4", "topic", "40m 30s");
+INSERT INTO course(id, header, topic, duration) VALUES (5, "Header 5", "course", "1h");
 
 INSERT INTO user(id, name, phone) VALUES (1, "Peter", "12345");
 INSERT INTO user(id, name, phone) VALUES (2, "Jane", "23456");
