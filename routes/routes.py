@@ -63,8 +63,10 @@ def course_list():
         dicts.append({
             "id": course[0],
             "id_article": course[1],
-            "length": course[2],
-            "description": course[3]
+            "header": course[2],
+            "topic": course[3],
+            "length": course[4],
+            "description": course[5]
         })
 
     return jsonify({
