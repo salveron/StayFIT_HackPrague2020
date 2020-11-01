@@ -6,13 +6,13 @@ DROP TABLE IF EXISTS course;
 CREATE TABLE user(id INTEGER PRIMARY KEY, name TEXT UNIQUE NOT NULL, phone TEXT UNIQUE NOT NULL);
 CREATE TABLE article(id INTEGER PRIMARY KEY, header TEXT UNIQUE NOT NULL, content TEXT, course_id INTEGER, FOREIGN KEY(course_id) REFERENCES course(id));
 CREATE TABLE video(id INTEGER PRIMARY KEY, url TEXT UNIQUE NOT NULL, title TEXT UNIQUE NOT NULL, description TEXT, course_id INTEGER, FOREIGN KEY(course_id) REFERENCES course(id));
-CREATE TABLE course(id INTEGER PRIMARY KEY, id_article INTEGER UNIQUE, FOREIGN KEY(id_article) REFERENCES article(id));
+CREATE TABLE course(id INTEGER PRIMARY KEY, id_article INTEGER UNIQUE, length TEXT NOT NULL, description TEXT, FOREIGN KEY(id_article) REFERENCES article(id));
 
-INSERT INTO course(id, id_article) VALUES (1, 1);
-INSERT INTO course(id, id_article) VALUES (2, 4);
-INSERT INTO course(id, id_article) VALUES (3, 3);
-INSERT INTO course(id, id_article) VALUES (4, 5);
-INSERT INTO course(id) VALUES (5);
+INSERT INTO course(id, id_article, length, description) VALUES (1, 1, "1:30:00", "Lorem ipsum...");
+INSERT INTO course(id, id_article, length) VALUES (2, 4, "2:00:00");
+INSERT INTO course(id, id_article, length) VALUES (3, 3, "10:00");
+INSERT INTO course(id, id_article, length) VALUES (4, 5, "40:30");
+INSERT INTO course(id, length) VALUES (5, "1:00:00");
 
 INSERT INTO user(id, name, phone) VALUES (1, "Peter", "12345");
 INSERT INTO user(id, name, phone) VALUES (2, "Jane", "23456");

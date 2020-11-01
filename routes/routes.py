@@ -1,6 +1,6 @@
 from flask import request, redirect, render_template, session, url_for, jsonify
 
-from utils import application, api
+from utils import application, api, conn, cursor
 
 
 @application.route("/session", methods=['GET'])
@@ -51,3 +51,22 @@ def verify():
             return jsonify(verification.ok())
 
     return render_template("verify.html")
+
+
+@application.route("/course_list", methods=["GET"])
+def course_list():
+    cursor.execute("SELECT * FROM course")
+    courses = cursor.fetchall()
+
+    dicts = []
+    for course in courses:
+        dicts.append({
+            "id": course[0],
+            "id_article": course[1],
+            "length": course[2],
+            "description": course[3]
+        })
+
+    return jsonify({
+        "courses": dicts
+    })
