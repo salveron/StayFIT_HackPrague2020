@@ -22,28 +22,27 @@ INSERT INTO user(id, name, phone) VALUES (4, "David", "45678");
 INSERT INTO user(id, name, phone) VALUES (5, "Jay", "56789");
 
 INSERT INTO video(id, url, title, description, course_id)
-    VALUES (1, "1. tzihFOcSvtY", "Introduction", NULL, 2);
+    VALUES (1, "tzihFOcSvtY", "Introduction", NULL, 3);
 INSERT INTO video(id, url, title, description, course_id)
-    VALUES (2, "YKmwgMD7i6I", "Money makes the world go around", "AAAAA", 2);
+    VALUES (2, "YKmwgMD7i6I", "Money make", "AAAAA", 3);
 INSERT INTO video(id, url, title, description, course_id)
-    VALUES (3, "J5FJ2bT26Sg", "Teaching mathematics", NULL, 2);
+    VALUES (3, "J5FJ2bT26Sg", "Teaching math", NULL, 3);
 INSERT INTO video(id, url, title, description, course_id)
-    VALUES (4, "4cVce3nxul8", "Money and children", NULL, 2);
+    VALUES (4, "4cVce3nxul8", "Money and children", NULL, 3);
 INSERT INTO video(id, url, title, description, course_id)
-    VALUES (5, "44PvX0Yv368", "Python Flask Tutorial: Full-Featured Web App Part 5 - Package Structure", "BBBBB", 1);
+    VALUES (5, "44PvX0Yv368", "Python Flask 1", "BBBBB", 1);
 INSERT INTO video(id, url, title, description, course_id)
-    VALUES (6, "CSHx6eCkmv0", "Python Flask Tutorial: Full-Featured Web App Part 6 - User Authentication", "CCCCCC", 1);
+    VALUES (6, "CSHx6eCkmv0", "Python Flask 2", "CCCCCC", 1);
 
 INSERT INTO article(id, header, content, course_id)
-    VALUES (1, "5 stock market investment tips", "
-1. Check your emotions at the door
-Success in investing doesn’t correlate with IQ … what you need is the temperament to control the urges that get other people into trouble in investing.” That''s wisdom from Warren Buffett, chairman of Berkshire Hathaway and an oft-quoted investing sage and role model for investors seeking long-term, market-beating, wealth-building returns.
+    VALUES (1, "5 stock market investment tips", "1. Check your emotions at the door
+“Success in investing doesn’t correlate with IQ … what you need is the temperament to control the urges that get other people into trouble in investing.” That''''s wisdom from Warren Buffett, chairman of Berkshire Hathaway and an oft-quoted investing sage and role model for investors seeking long-term, market-beating, wealth-building returns.
 Buffett is referring to investors who let their heads, not their guts, drive their investing decisions. In fact, trading overactivity triggered by emotions is one of the most common ways investors hurt their own portfolio returns.
 All the stock market tips that follow can help investors cultivate the temperament required for long-term success.
 
 2. Pick companies, not ticker symbols
 
-It’s easy to forget that behind the alphabet soup of stock quotes crawling along the bottom of every CNBC broadcast is an actual business. But don’t let stock picking become an abstract concept. Remember: Buying a share of a company''s stock makes you a part owner of that business.
+It’s easy to forget that behind the alphabet soup of stock quotes crawling along the bottom of every CNBC broadcast is an actual business. But don’t let stock picking become an abstract concept. Remember: Buying a share of a company''''s stock makes you a part owner of that business.
 
 Remember: Buying a share of a company’s stock makes you a part owner of that business.”
 
@@ -67,9 +66,7 @@ Buy “the basket”: Can’t decide which of the companies in a particular indu
 5. Avoid trading overactivity
 
 Checking in on your stocks once per quarter — such as when you receive quarterly reports — is plenty. But it’s hard not to keep a constant eye on the scoreboard. This can lead to overreacting to short-term events, focusing on share price instead of company value, and feeling like you need to do something when no action is warranted.
-When one of your stocks experiences a sharp price movement, find out what triggered the event. Is your stock the
-
-victim of collateral damage from the market responding to an unrelated event? Has something changed in the underlying business of the company? Is it something that meaningfully affects your long-term outlook?
+When one of your stocks experiences a sharp price movement, find out what triggered the event. Is your stock the victim of collateral damage from the market responding to an unrelated event? Has something changed in the underlying business of the company? Is it something that meaningfully affects your long-term outlook?
 ", 1);
 INSERT INTO article(id, header, content, course_id)
     VALUES (2, "4 Tips to spend money", "1.  Track Your Finances
@@ -96,7 +93,7 @@ The average person spends far too much money merely trying to maintain an image.
 
 However, “Keeping Up With the Joneses” is an expensive and unnecessary pursuit. Buy the things that you yourself enjoy and don’t fall prey to the feeling that you have to spend money in order to impress other people.", NULL);
 INSERT INTO article(id, header, content, course_id)
-    VALUES (3, "Article 3!", "Mega useful text\n\n\nAnd again!", 3);
+    VALUES (3, "Financial literacy", "Learn from expert how to grow financially -obtain financial freedom. After course completetion get a promocode, which can be spent in local shops", 3);
 INSERT INTO article(id, header, content, course_id)
     VALUES (4, "Article 4!", "Mega useful text\n\n\nAnd again!", 2);
 INSERT INTO article(id, header, content, course_id)
