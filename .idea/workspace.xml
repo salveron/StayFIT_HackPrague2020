@@ -20,18 +20,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="31e475ad-df18-46ac-928b-ad24881d9090" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/routes/add_routes.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/routes/get_routes.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/routes/routes.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/video_links" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.db" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/create.sql" beforeDir="false" afterPath="$PROJECT_DIR$/db/create.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/get_routes.py" beforeDir="false" afterPath="$PROJECT_DIR$/routes/get_routes.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/video_links" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,6 +63,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="DatabaseDriversLRU" value="sqlite" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -78,8 +75,9 @@
       <recent name="$PROJECT_DIR$/app" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/routes" />
+      <recent name="$PROJECT_DIR$/db" />
       <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/routes" />
     </key>
   </component>
   <component name="RunManager">
@@ -117,7 +115,7 @@
       <workItem from="1604099789088" duration="794000" />
       <workItem from="1604101071100" duration="51000" />
       <workItem from="1604101132143" duration="358000" />
-      <workItem from="1604141630869" duration="23157000" />
+      <workItem from="1604141630869" duration="32849000" />
     </task>
     <servers />
   </component>
@@ -137,14 +135,22 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="260" y="376" width="1390" height="301" key="#SQL_Dialects" timestamp="1604187182526">
+      <screen x="0" y="27" width="1920" height="993" />
+    </state>
+    <state x="260" y="376" width="1390" height="301" key="#SQL_Dialects/0.27.1920.993@0.27.1920.993" timestamp="1604187182526" />
+    <state x="555" y="185" width="800" height="684" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1604184155835">
+      <screen x="0" y="27" width="1920" height="993" />
+    </state>
+    <state x="555" y="185" width="800" height="684" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.27.1920.993@0.27.1920.993" timestamp="1604184155835" />
     <state x="651" y="325" width="607" height="403" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1604163258114">
       <screen x="0" y="27" width="1920" height="993" />
     </state>
     <state x="651" y="325" width="607" height="403" key="#com.intellij.fileTypes.FileTypeChooser/0.27.1920.993@0.27.1920.993" timestamp="1604163258114" />
-    <state x="693" y="272" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1604182105555">
+    <state x="693" y="272" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1604185448430">
       <screen x="0" y="27" width="1920" height="993" />
     </state>
-    <state x="693" y="272" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.27.1920.993@0.27.1920.993" timestamp="1604182105555" />
+    <state x="693" y="272" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.27.1920.993@0.27.1920.993" timestamp="1604185448430" />
     <state width="263" height="500" key="HiddenNamespacesPopup" timestamp="1604158815282">
       <screen x="0" y="27" width="1920" height="993" />
     </state>
