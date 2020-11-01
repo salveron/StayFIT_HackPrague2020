@@ -76,5 +76,15 @@ def get_course(course_id):
         "article_content": course[8]
     }
 
-    cursor.execute(f"")
+    cursor.execute(f"SELECT video.* FROM course JOIN video ON course.id = video.course_id WHERE course.id = {course_id}")
+    fetched = cursor.fetchall()
+    videos = []
+    for video in fetched:
+        videos.append({
+            "id": video[0],
+            "url": video[1],
+            "title": video[2],
+            "description": video[3]
+        })
+    result["videos"] = videos
     return jsonify(result)
