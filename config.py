@@ -6,3 +6,4 @@ class Config(object):
     DEBUG = True
     CSRF_ENABLED = True
     AUTHY_API_KEY = 'nTzk00XPD02V1v3hevVRTc7PQzkiHk0C'
+    SESSION_TYPE = 'filesystem'
