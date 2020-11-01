@@ -1,12 +1,26 @@
 import {Image, ImageBackground, StyleSheet, Text, TextInput, TouchableOpacity, View} from "react-native";
 import {StatusBar} from "expo-status-bar";
 import React from "react";
+import { IP_ADRESS } from "../config";
 
 const LoginScreen = ({ navigation }) => {
-    const [value, onChangeText] = React.useState('');
+    const [value, onChangeText] = React.useState('')
 
-    const goToVerify = () => {
-        navigation.navigate('Verify')
+    const phoneButtonHandler = () => {
+        fetch(`${IP_ADRESS}/phone_verification`, {
+            method: 'POST',
+            headers: {
+                Accept: 'application/json',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                phone_number: value,
+                country_code: '420'
+            })
+        }).then(r => navigation.navigate('Verify'))
+            .catch((error) => {
+                console.error(error);
+            });
     }
 
     return (
@@ -27,7 +41,7 @@ const LoginScreen = ({ navigation }) => {
                     />
                 </View>
 
-                <TouchableOpacity style={styles.appButtonContainer} onPress = {goToVerify}>
+                <TouchableOpacity style={styles.appButtonContainer} onPress = {phoneButtonHandler}>
                     <Text style={{textAlign: 'center', color: '#ffffff', fontWeight: 'bold', fontSize: 18}}>Sign in</Text>
                 </TouchableOpacity>
                 <StatusBar style="auto"/>

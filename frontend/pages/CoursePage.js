@@ -1,65 +1,92 @@
-import {Image, ImageBackground, StyleSheet, Text, TextInput, TouchableOpacity, View, ScrollView} from "react-native";
+import {
+    Image,
+    ImageBackground,
+    StyleSheet,
+    Text,
+    TextInput,
+    TouchableOpacity,
+    View,
+    ScrollView
+} from "react-native";
 import React from "react";
 import * as Progress from 'react-native-progress'
-import { SearchBar } from 'react-native-elements';
+import {SearchBar} from 'react-native-elements'
+import { IP_ADRESS } from "../config";
 
-const CoursePage = () => {
-    const [search, setSearch] = React.useState('')
+class CoursePage extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            data: []
+        };
+    }
 
-    const updateSearch = (search) => {
-        this.setState({search});
-    };
+    async componentDidMount() {
+        const response = await fetch(`${IP_ADRESS}/course_list`);
+        const json = await response.json();
+        this.setState({data: json})
+    }
 
-    return (
-        <View style={styles.container}>
-            <View style={{flexDirection: 'row-reverse', flex: 1, marginTop: 70}}>
-                <Image style={styles.avatar}
-                       source={require('../assets/avatar.png')}/>
-            </View>
-            <View style={styles.topView}>
-                <Text style={{fontSize: 40, fontWeight: 'bold', color: '#374254', marginBottom: 20}}>Hello!
-                    👋</Text>
-                <Text style={{marginBottom: 20, fontSize: 25, fontWeight: 'bold'}}>Let's find a course for you</Text>
-                <SearchBar
-                    placeholder="Search for course"
-                    onChangeText={updateSearch}
-                    value={search}
-                    lightTheme={true}
-                    containerStyle={{backgroundColor: 'white', borderWidth: 0, borderRadius: 5}}
-                    hideBackground={true}
-                />
-            </View>
-            <ScrollView
-                showsVerticalScrollIndicator={false}>
-                <View style={styles.courses}>
-                    <CourseComponent
-                        header='Investment for beginners'
-                        about='Lorem ipsum dolor sit amet, consectetuer adipiscing elit. In enim a arcu imperdiet malesuada.'
-                        type='course'
-                        time='2h 19min'
-                        key='1'
-                    />
-                    <CourseComponent
-                        header='Real Estate or stocks'
-                        about='Lorem ipsum dolor sit amet, consectetuer adipiscing elit. In enim a arcu imperdiet malesuada.'
-                        type='topic'
-                        time='2h 19min'
-                        key='2'
-                    />
-                    <CourseComponent
-                        header='Investment for beginners'
-                        about='Lorem ipsum dolor sit amet, consectetuer adipiscing elit. In enim a arcu imperdiet malesuada.'
-                        type='course'
-                        time='2h 19min'
-                        key='3'
+    render() {
+        const {data} = this.state;
+
+        if (data.courses === undefined) {
+            return null;
+        }
+
+        const onCoursePress = (keyEl, topic) => {
+            if ( topic === 'course')
+                this.props.navigation.navigate('CourseItemPage', {
+                    key: keyEl
+                });
+            else
+                this.props.navigation.navigate('TopicItemPage', {
+                    key: keyEl
+                });
+        }
+
+        return (
+            <View style={styles.container}>
+                <View style={{flexDirection: 'row-reverse', flex: 1, marginTop: 70}}>
+                    <Image style={styles.avatar}
+                           source={require('../assets/avatar.png')}/>
+                </View>
+                <View style={styles.topView}>
+                    <Text style={{fontSize: 40, fontWeight: 'bold', color: '#374254', marginBottom: 20}}>Hello!
+                        👋</Text>
+                    <Text style={{marginBottom: 20, fontSize: 25, fontWeight: 'bold'}}>Let's find a course for
+                        you</Text>
+                    <SearchBar
+                        placeholder="Search for course"
+                        onChangeText={() => {
+                        }}
+                        value={'search'}
+                        lightTheme={true}
+                        containerStyle={{backgroundColor: 'white', borderWidth: 0, borderRadius: 5}}
+                        hideBackground={true}
                     />
                 </View>
-            </ScrollView>
-        </View>
-    )
+                <ScrollView
+                    showsVerticalScrollIndicator={false}>
+                    <View style={styles.courses}>
+                        {this.state.data.courses ? this.state.data.courses.map(item => (
+                            <CourseComponent
+                                header={item.header}
+                                about={item.description}
+                                type={item.topic}
+                                key={item.id}
+                                time={item.duration}
+                                element={item.id}
+                                onCPress={onCoursePress}/>
+                        )) : <Text></Text>}
+                    </View>
+                </ScrollView>
+            </View>
+        )
+    }
 }
 
-const CourseComponent = ({header, about, type, time, key}) => {
+const CourseComponent = ({header, about, type, time, element, onCPress}) => {
     let backColor = '#7683F7'
     let progressColor = '#F19894'
     if (type === 'topic') {
@@ -68,34 +95,39 @@ const CourseComponent = ({header, about, type, time, key}) => {
     }
 
     return (
-        <View style={{padding: 20, borderRadius: 10, color: "#ffffff", marginBottom: 30, backgroundColor: backColor}} key={key}>
-            <View style={{flexDirection: 'row'}}>
-                <Text style={{
-                    fontSize: 20,
-                    fontWeight: 'bold',
-                    color: '#ffffff',
-                    marginBottom: 20,
-                    marginRight: 20,
-                    minWidth: 225
-                }}>{header}</Text>
-                <View style={styles.courseLabel}>
-                    <Text style={{fontSize: 15, color: '#7683F7'}}>{type}</Text>
+        <TouchableOpacity key={ element } onPress={() => onCPress( element, type )}>
+            <View
+                style={{padding: 20, borderRadius: 10, color: "#ffffff", marginBottom: 30, backgroundColor: backColor}}
+                key={element}>
+                <View style={{flexDirection: 'row'}}>
+                    <Text style={{
+                        fontSize: 20,
+                        fontWeight: 'bold',
+                        color: '#ffffff',
+                        marginBottom: 20,
+                        marginRight: 20,
+                        minWidth: 225
+                    }}>{header}</Text>
+                    <View style={styles.courseLabel}>
+                        <Text style={{fontSize: 15, color: '#7683F7'}}>{type}</Text>
+                    </View>
                 </View>
+                <View style={{flexDirection: 'row'}}>
+                    <Text style={{
+                        fontSize: 15,
+                        color: '#ffffff',
+                        marginBottom: 20,
+                        width: '70%',
+                        marginRight: 20
+                    }}>{about} </Text>
+                    <Image style={{width: 17, height: 17, marginRight: 5}}
+                           source={require('../assets/icon-clock.png')}/>
+                    <Text style={{fontSize: 14, color: '#ffffff'}}>{time}</Text>
+                </View>
+                <Progress.Bar progress={0.3} width={200} color={progressColor} unfilledColor={'#ffffff'}
+                              borderColor={'rgba(0, 122, 255, 0)'}/>
             </View>
-            <View style={{flexDirection: 'row'}}>
-                <Text style={{
-                    fontSize: 15,
-                    color: '#ffffff',
-                    marginBottom: 20,
-                    width: '70%',
-                    marginRight: 20
-                }}>{about} </Text>
-                <Image style={{width: 17, height: 17, marginRight: 5}} source={require('../assets/icon-clock.png')}/>
-                <Text style={{fontSize: 14, color: '#ffffff'}}>{time}</Text>
-            </View>
-            <Progress.Bar progress={0.3} width={200} color={progressColor} unfilledColor={'#ffffff'}
-                          borderColor={'rgba(0, 122, 255, 0)'}/>
-        </View>
+        </TouchableOpacity>
     )
 }
 

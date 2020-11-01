@@ -2,71 +2,126 @@ import {Image, ImageBackground, StyleSheet, Text, TextInput, TouchableOpacity, V
 import React from "react"
 import Video from 'react-native-video'
 import YoutubePlayer from "react-native-youtube-iframe";
+import { IP_ADRESS } from "../config";
 
-const CourseItemPage = () => {
+class CourseItemPage extends React.Component {
+    isMount = false
+    constructor(props) {
+        super(props);
+        this.state = {
+            data: {},
+            videos: [],
+            video: 'tzihFOcSvtY'
+        };
+    }
 
-    return (
-        <ScrollView>
-            <View style={styles.container}>
-                <View style={{flexDirection: 'row-reverse', flex: 1, marginTop: 40}}>
-                    <Image style={{width: 40, height: 40, marginRight: 15}} source={require('../assets/left_white_arrow.png')}/>
+    async componentDidMount() {
+        let key = this.props.route.params.key;
+
+        const response = await fetch(`${IP_ADRESS}/courses/${key}`);
+        const json = await response.json();
+            this.setState({
+                data: json
+                }
+        )
+    }
+
+    componentWillUnmount() {
+        this.isMount = false
+    }
+
+    render() {
+        const onPressLink = (element) => {
+            if ( element === 1)
+                this.setState({
+                    data: this.state.data,
+                    video: 'tzihFOcSvtY'
+                })
+            else if ( element === 2 )
+                this.setState({
+                    data: this.state.data,
+                    video: 'YKmwgMD7i6I'
+                })
+            else if ( element === 3 )
+                this.setState({
+                    data: this.state.data,
+                    video: 'J5FJ2bT26Sg'
+                })
+            else if ( element === 4 )
+                this.setState({
+                    data: this.state.data,
+                    video: '4cVce3nxul8'
+                })
+        }
+
+        return (
+            <ScrollView>
+                <View style={styles.container}>
+                    <View style={{flexDirection: 'row-reverse', flex: 1, marginTop: 40}}>
+                        <TouchableOpacity hitSlop={{top: 30, bottom: 30, left: 30, right: 30}}
+                                          onPress={() => this.props.navigation.navigate('CoursePage')}>
+                            <Image style={{width: 40, height: 40, marginRight: 15}}
+                                   source={require('../assets/left_white_arrow.png')}/>
+                        </TouchableOpacity>
+                    </View>
+                    <View style={{padding: 20, marginTop: 30}}>
+                        <Text style={{
+                            fontSize: 35,
+                            color: '#ffffff',
+                            fontWeight: "bold",
+                            marginBottom: 15
+                        }}>{this.state.data.article_header}</Text>
+                        <Text style={{fontSize: 25, color: '#ffffff', fontWeight: "bold"}}>Intro in stocks</Text>
+                    </View>
+                    <View>
+                        <YoutubePlayer
+                            height={300}
+                            play={true}
+                            videoId={this.state.video}
+                            onChangeState={() => {
+                            }}
+                        />
+                    </View>
+                    <View>
+                        <Text style={{marginLeft: 20, marginRight: 20, color: "#ffffff", marginBottom: 20}}>
+                            {this.state.data.article_content}
+                        </Text>
+                    </View>
+                    <View style={styles.contentContainer}>
+                        <Text style={{fontSize: 30, color: '#ffffff', fontWeight: "bold"}}>Course content</Text>
+                    </View>
+                    <View style={{alignSelf: "center", flexDirection: 'column', marginBottom: 50}}>
+                        <ContentItem header='Introduction' locked={false} number={1} onPressed={onPressLink} index={1}/>
+                        <ContentItem header='Money makes the world go around' locked={false} number={2} index={2} onPressed={onPressLink}/>
+                        <ContentItem header='Teaching mathematics' locked={true} number={3} index={3} onPressed={onPressLink}/>
+                        <ContentItem header='Money and children' locked={true} number={4} index={4} onPressed={onPressLink}/>
+                    </View>
                 </View>
-                <View style={{padding: 20, marginTop: 30}}>
-                    <Text style={{fontSize: 35, color: '#ffffff', fontWeight: "bold", marginBottom: 15}}>Investment for
-                        beginners</Text>
-                    <Text style={{fontSize: 25, color: '#ffffff', fontWeight: "bold"}}>Intro in stocks</Text>
-                </View>
-                <View>
-                    <YoutubePlayer
-                        height={300}
-                        play={true}
-                        videoId={"iee2TATGMyI"}
-                        onChangeState={() => {}}
-                    />
-                </View>
-                <View>
-                    <Text style={{marginLeft: 20, marginRight: 20, color: "#ffffff", marginBottom: 20}}>
-                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. In enim a arcu imperdiet malesuada.
-                        Duis ante orci, molestie vitae vehicula venenatis, tincidunt ac pede. Maecenas fermentum, sem in
-                        pharetra pellentesque, velit turpis volutpat ante, in pharetra metus odio a lectus. Nullam
-                        faucibus mi quis velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
-                        inceptos hymenaeos. Nulla turpis magna, cursus sit amet, suscipit a, interdum id, felis. Integer
-                        in sapien. Curabitur vitae diam non enim vestibulum interdum. Nullam sapien sem, ornare ac,
-                        nonummy non, lobortis a enim. Integer lacinia. Proin in tellus sit amet nibh dignissim sagittis.
-                    </Text>
-                </View>
-                <View style={styles.contentContainer}>
-                    <Text style={{fontSize: 30, color: '#ffffff', fontWeight: "bold"}}>Course content</Text>
-                </View>
-                <View style={{alignSelf: "center", flexDirection: 'column', marginBottom: 50}}>
-                    <ContentItem header='Intro in stocks' locked={false} number={1}/>
-                    <ContentItem header='Invest in gold' locked={false} number={2}/>
-                    <ContentItem header='What is IPO' locked={true} number={3}/>
-                    <ContentItem header='Test' locked={true} number={4}/>
-                </View>
-            </View>
-        </ScrollView>
-    )
+            </ScrollView>
+        )
+    }
 }
 
-const ContentItem = ({header, locked, number}) => {
+const ContentItem = ({header, locked, number, onPressed, index}) => {
     let lock = require('../assets/open_lock.png')
-    if ( locked )
+    if (locked)
         lock = require('../assets/closed_lock.png')
 
     if (number <= 9)
         number = '0' + number
 
     return (
-        <View style={styles.contentItem}>
-            <View style={{flexDirection: 'row', flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-                <View style={styles.contentNumber}>
-                    <Text style={{fontSize: 30, color: '#000000', fontWeight: "bold"}}>{number}</Text>
+        <TouchableOpacity key={index} onPress={() => onPressed(index)}>
+            <View style={styles.contentItem}>
+                <View style={{flexDirection: 'row', flex: 1, justifyContent: 'center', alignItems: 'center'}}>
+                    <View style={styles.contentNumber}>
+                        <Text style={{fontSize: 30, color: '#000000', fontWeight: "bold"}}>{number}</Text>
+                    </View>
+                    <Text style={{fontSize: 20, color: '#000000', marginRight: 10, minWidth: 120}}>{header}</Text>
+                    <Image style={{width: 35, height: 40, marginRight: 5}} source={lock}/>
                 </View>
-                <Text style={{fontSize: 20, color: '#000000', marginRight: 10, minWidth: 120}}>{header}</Text>
-                <Image style={{width: 35, height: 40, marginRight: 5}} source={lock}/>
             </View>
-        </View>
+        </TouchableOpacity>
     )
 }
 

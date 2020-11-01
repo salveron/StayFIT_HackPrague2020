@@ -2,10 +2,27 @@ import {Image, ImageBackground, StyleSheet, Text, TextInput, TouchableOpacity, V
 import {StatusBar} from "expo-status-bar";
 import React from "react";
 import CodeInput from 'react-native-confirmation-code-input';
+import { IP_ADRESS } from "../config";
 
 
-const VerifyScreen = () => {
+const VerifyScreen = ({ navigation }) => {
     const [value, onChangeText] = React.useState('')
+
+    const verifyButton = () => {
+        fetch(`${IP_ADRESS}/verify`, {
+            method: 'POST',
+            headers: {
+                Accept: 'application/json',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                token: value
+            })
+        }).then(r => r.json() ? navigation.navigate('GoalsPage') : '')
+            .catch((error) => {
+                console.error(error);
+            });
+    }
 
     return (
         <View style={styles.container}>
@@ -21,7 +38,7 @@ const VerifyScreen = () => {
                     ignoreCase={true}
                     inputPosition='center'
                     codeLength={4}
-                    onFulfill={(isValid) => this._onFinishCheckingCode1(isValid)}
+                    onFulfill={verifyButton}
                     containerStyle={{ marginTop: 30 }}
                     codeInputStyle={{ borderWidth: 1.5 }}
                     codeInputStyle={{ fontSize: 35 }}

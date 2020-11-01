@@ -2,7 +2,7 @@ import {Image, ImageBackground, StyleSheet, Text, TextInput, TouchableOpacity, V
 import {StatusBar} from "expo-status-bar";
 import React from "react";
 
-const GoalsOKPage = ({ navigation }) => {
+const GoalsOKPage = ({navigation}) => {
 
     const goToCourses = () => {
         navigation.navigate('CoursePage')
@@ -14,12 +14,13 @@ const GoalsOKPage = ({ navigation }) => {
                 <Image style={styles.mainLogo}
                        source={require('../assets/EduVest.png')}/>
                 <Text style={{fontSize: 32, color: '#374254', marginBottom: 15}}>You selected a goal!</Text>
-               
-                <View style={styles.appButtonContainer}>
-                <TouchableOpacity onPress = {goToCourses}>
-                    <Text style={{textAlign: 'center', color: '#ffffff', fontWeight: 'bold', fontSize: 18}}>Go to courses</Text>
+
+                <TouchableOpacity onPress={goToCourses}>
+                    <View style={styles.appButtonContainer}>
+                        <Text style={{textAlign: 'center', color: '#ffffff', fontWeight: 'bold', fontSize: 18}}>Go to
+                            courses</Text>
+                    </View>
                 </TouchableOpacity>
-                </View>
 
                 <StatusBar style="auto"/>
             </ImageBackground>
@@ -47,8 +48,8 @@ const styles = StyleSheet.create({
         backgroundColor: '#7683F7',
         alignItems: 'center',
         justifyContent: 'center',
-        padding: 15,
-        width: '80%',
+        padding: 20,
+        width: 220,
         borderRadius: 10,
         marginBottom: 50,
         shadowColor: "#000",
