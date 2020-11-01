@@ -1,6 +1,6 @@
 from flask import request, redirect, render_template, session, url_for, jsonify
 
-from backend.utils import application, api, cursor
+from utils import application, api, cursor
 
 
 @application.route("/session", methods=['GET'])

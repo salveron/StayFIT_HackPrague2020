@@ -5,7 +5,7 @@ from flask_cors import CORS
 from flask_session import Session
 import sqlite3
 
-from backend.config import Config
+from config import Config
 
 
 application = Flask(__name__)

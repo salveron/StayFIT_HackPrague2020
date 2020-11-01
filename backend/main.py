@@ -1,6 +1,6 @@
 import os
 
-from backend.utils import conn, cursor, application
+from utils import conn, cursor, application
 
 
 with open(os.path.join("db", "create.sql")) as f:

@@ -1,6 +1,6 @@
 from flask import jsonify
 
-from backend.utils import application, cursor
+from utils import application, cursor
 
 
 @application.route("/users/<user_id>", methods=['GET'])
