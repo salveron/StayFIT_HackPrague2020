@@ -7,13 +7,21 @@ in the reality of economic crises and banks to become more popular and loved by 
 
 ## Project description
 
-The main idea of our project is to create an education platform for all online-banking users. This app will help people not only learn how to manage their finances efficiently, but also see improving using the statistics from his personal online banking account. We decided to use discount promotions for small business production as a motivation to study and growing financial freedom.
+The main idea of our project is to create an **educational platform** for all online-banking users. This app will 
+help people to not only learn how to manage their finances efficiently, but also see the improving using the 
+*Statistics* from their personal online banking account. We decided to use discount promotions for **small 
+businesses products** as a motivation to study and develop financial freedom.
 
-The user authorize by his phone number and choose his main financial goal. After that he has an access for courses. After completing each course the user has to take a test and if all his answers are right, he will get a promo. 
+The user authorizes with their phone number and chooses their main financial goal. After that they have an
+access for courses. After completing each course the user has to take a test and if all their answers are correct,
+they will get a promocode. 
 
-All discounts are listed in personal profile. There are another two sections in personal profile: Goals and My courses. In Goals all financial tasks(e.g. Spend 100$ less than last week) are listed. Another way to get a discount for small business production is to complete all tasks.
+All discounts are listed in a **personal profile**. There are another two sections in personal profile: *Goals*
+and *My courses*. In *Goals* all financial tasks (e.g. *Spend less than 100$ next week*) are shown. Another way
+to get a discount for small businesses products is to complete all tasks.
 
-This way a person broaden his mind and improve his financial status. The progress is visible in Statistics, which was made with the help of personal online banking data.
+This way a person broadens their mind and improves their financial status. The progress is visible in 
+the *Statistics* section, which was made with the help of the personal online banking data.
 
 ## Installation and running
 
