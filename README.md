@@ -1,6 +1,6 @@
 # EduVest (by StayFIT).
 
-Team **StayFIT** at **HackPrague2020** hackathon would love to introduce you to its
+Team **StayFIT** at **HackPrague2020** hackathon would love to introduce you its
 lovely HackPrague2020 hackathon child - **EduVest**. **EduVest** is a mobile platform
 that helps people to become more financially literate, small businesses to recover
 in the reality of economic crises and banks to become more popular and loved by the clients.
@@ -8,13 +8,12 @@ in the reality of economic crises and banks to become more popular and loved by 
 ## Project description
 
 The main idea of our project is to create an **educational platform** for all online-banking users. This app will 
-help people to not only learn how to manage their finances efficiently, but also see the improving using the 
+help people not only to learn how to manage their finances efficiently, but also see the improving using the 
 *Statistics* from their personal online banking account. We decided to use discount promotions for **small 
 businesses products** as a motivation to study and develop financial freedom.
 
-The user authorizes with their phone number and chooses their main financial goal. After that they have an
-access for courses. After completing each course the user has to take a test and if all their answers are correct,
-they will get a promocode. 
+The user authorizes with their phone number and chooses their main financial goal. After that he has an
+access for courses. After completing each course the user has to take a test and if all their answers are correct, they will get a promocode. 
 
 All discounts are listed in a **personal profile**. There are another two sections in personal profile: *Goals*
 and *My courses*. In *Goals* all financial tasks (e.g. *Spend less than 100$ next week*) are shown. Another way
