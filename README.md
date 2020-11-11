@@ -12,8 +12,8 @@ help people not only to learn how to manage their finances efficiently, but also
 *Statistics* from their personal online banking account. We decided to use discount promotions for **small 
 businesses products** as a motivation to study and develop financial freedom.
 
-The user authorizes with their phone number and chooses their main financial goal. After that he has an
-access for courses. After completing each course the user has to take a test and if all their answers are correct, they will get a promocode. 
+The user authorizes with their phone number and chooses the main financial goal. After that he has an
+access for courses. After completing each course the user has to take a test and if all answers are correct, he will get a promocode. 
 
 All discounts are listed in a **personal profile**. There are another two sections in personal profile: *Goals*
 and *My courses*. In *Goals* all financial tasks (e.g. *Spend less than 100$ next week*) are shown. Another way
